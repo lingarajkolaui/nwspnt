@@ -1,0 +1,55 @@
+<div id="entment" ng-controller="fshncntrl">
+  <div class="wrapper">
+      <!-- start nav -->
+ <div id="main">
+    <div class="row" >
+    <div class="col-md-12">
+
+        
+        <div class="row">
+        
+        <div class="col-md-12">
+
+            <div ng-repeat="enta in fsh.fshtdata">         
+         
+              
+            <div class="col-md-12 maren" ng-show="($index % 3) == 0">
+        <div class="frststry entycontent">
+         <div class="thumbnail">
+            <img ng-src="{{enta.urlToImage}}" />
+        </div>
+            <div class="clear"></div>
+            <div class="txtfrst">
+              <h2 class="post-title">{{enta.title}}</h2>
+                <div class="clear"></div>
+                <div class="entdes">
+                {{enta.description}}                
+                </div>
+            </div>
+        </div>
+                </div>
+                
+                
+        <div class="col-md-4 smstry maren" >
+          <div class="thumbsr">
+            <img ng-src="{{enta.urlToImage}}" />
+            </div>
+            <div class="titless">
+            <h4>{{enta.title}}</h4>
+            </div>
+        </div>   
+            
+        
+              
+
+        </div>
+            </div>
+        </div>
+        
+        
+    </div>     
+  </div>
+      <!-- end row -->
+</div>
+</div>
+</div>

@@ -1,0 +1,91 @@
+<div id="entment" ng-controller="allnews">
+  <div class="wrapper">
+      <!-- start nav -->
+      
+<!--http://www.aboutmatthewhall.com/-->
+ <div id="main">
+    <div class="row" >
+        <div class="col-lg-12">
+        <div class="row">
+            <div class="col-md-8" style="margin-top:6px;">
+<div class="row newsfeed">
+    
+    <div class="col-md-4 smstry maren" ng-repeat="enta in dlist">
+       <a ng-href="{{enta.url}}" target="_blank">  <div class="thumbsr">
+            <img ng-src="{{enta.urlToImage}}" />
+            </div>
+            <div class="titless">
+            <h4>{{enta.title | limitTo:51}}..</h4>
+            </div></a>
+        </div>   
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="allnwsimg"><h2>Click TO View</h2></div>
+<div class="row" id="feedList">
+<div class="col-md-4"><img src="/assets/images/bbc-news-m.png" data-src="bbc-news"/></div>
+<div class="col-md-4"><img src="/assets/images/the-economist-m.png" data-src="the-economist"/></div>
+<div class="col-md-4"><img src="/assets/images/business-insider-uk-m.png" data-src="business-insider"/></div>
+<div class="col-md-4"><img src="/assets/images/bild-m.png" data-src="bild"/></div>
+    <div class="col-md-4"><img src="/assets/images/abc-news-au-m.png" data-src="abc-news-au"/></div>
+    <div class="col-md-4"><img src="/assets/images/ars-technica-m.png" data-src="ars-technica"/></div>
+    <div class="col-md-4"><img src="/assets/images/associated-press-m.png" data-src="associated-press"/></div>
+    <div class="col-md-4"><img src="/assets/images/bbc-sport-m.png" data-src="bbc-sport-m"/></div>
+    <div class="col-md-4"><img src="/assets/images/bloomberg-m.png" data-src="bloomberg"/></div>
+    <div class="col-md-4"><img src="/assets/images/business-insider-m.png" data-src=""/></div>
+    <div class="col-md-4"><img src="/assets/images/buzzfeed-m.png" data-src="business-insider"/></div>
+    <div class="col-md-4"><img src="/assets/images/cnbc-m.png" data-src="cnbc"/></div>
+    <div class="col-md-4"><img src="/assets/images/cnn-m.png" data-src="cnn"/></div>
+    <div class="col-md-4"><img src="/assets/images/daily-mail-m.png" data-src="daily-mail"/></div>
+    <div class="col-md-4"><img src="/assets/images/der-tagesspiegel-m.png" data-src="der-tagesspiegel"/></div>
+    <div class="col-md-4"><img src="/assets/images/die-zeit-m.png" data-src="die-zeit"/></div>
+    <div class="col-md-4"><img src="/assets/images/engadget-m.png" data-src="engadget"/></div>
+    <div class="col-md-4"><img src="/assets/images/entertainment-weekly-m.png" data-src="entertainment-weekly"/></div>
+    <div class="col-md-4"><img src="/assets/images/espn-cric-info-m.png" data-src="espn-cric-info"/></div>
+    <div class="col-md-4"><img src="/assets/images/focus-m.png" data-src="focus"/></div>
+    <div class="col-md-4"><img src="/assets/images/football-italia-m.png" data-src="football-italia"/></div>
+    <div class="col-md-4"><img src="/assets/images/fortune-m.png" data-src="fortune"/></div>
+    <div class="col-md-4"><img src="/assets/images/four-four-two-m.png" data-src="four-four-two"/></div>
+    <div class="col-md-4"><img src="/assets/images/fox-sports-m.png" data-src="fox-sports"/></div>
+    <div class="col-md-4"><img src="/assets/images/google-news-m.png" data-src="google-news"/></div>
+    <div class="col-md-4"><img src="/assets/images/gruenderszene-m.png" data-src="gruenderszene"/></div>
+    <div class="col-md-4"><img src="/assets/images/hacker-news-m.png" data-src="hacker-news"/></div>
+    <div class="col-md-4"><img src="/assets/images/handelsblatt-m.png" data-src="handelsblatt"/></div>
+    <div class="col-md-4"><img src="/assets/images/ign-m.png" data-src="ign"/></div>
+    <div class="col-md-4"><img src="/assets/images/independent-m.png" data-src="independent"/></div>
+    <div class="col-md-4"><img src="/assets/images/mashable-m.png" data-src="mashable"/></div>
+    <div class="col-md-4"><img src="/assets/images/metro-m.png" data-src="metro"/></div>
+    <div class="col-md-4"><img src="/assets/images/mirror-m.png" data-src="mirror"/></div>
+    <div class="col-md-4"><img src="/assets/images/mtv-news-m.png" data-src="mtv-news"/></div>
+    <div class="col-md-4"><img src="/assets/images/mtv-news-uk-m.png" data-src="mtv-news"/></div>
+    <div class="col-md-4"><img src="/assets/images/national-geographic-m.png" data-src="national-geographic"/></div>
+    <div class="col-md-4"><img src="/assets/images/new-scientist-m.png" data-src="new-scientist"/></div>
+    <div class="col-md-4"><img src="/assets/images/newsweek-m.png" data-src="newsweek"/></div>
+    <div class="col-md-4"><img src="/assets/images/new-york-magazine-m.png" data-src="new-york-magazine"/></div>
+    <div class="col-md-4"><img src="/assets/images/nfl-news-m.png" data-src="nfl-news"/></div>
+    <div class="col-md-4"><img src="/assets/images/polygon-m.png" data-src="polygon"/></div>
+    <div class="col-md-4"><img src="/assets/images/reddit-r-all-m.png" data-src="reddit-r-all"/></div>
+    <div class="col-md-4"><img src="/assets/images/reuters-m.png" data-src="reuters"/></div>
+    <div class="col-md-4"><img src="/assets/images/sky-news-m.png" data-src="sky-news"/></div>
+    <div class="col-md-4"><img src="/assets/images/spiegel-online-m.png" data-src="spiegel-online"/></div>
+    <div class="col-md-4"><img src="/assets/images/t3n-m.png" data-src="t3n-m"/></div>
+    <div class="col-md-4"><img src="/assets/images/talksport-m.png" data-src="talksport"/></div>
+    <div class="col-md-4"><img src="/assets/images/techcrunch-m.png" data-src="techcrunch"/></div>
+    <div class="col-md-4"><img src="/assets/images/techradar-m.png" data-src="techradar"/></div>
+    <div class="col-md-4"><img src="/assets/images/the-economist-m.png" data-src="the-economist"/></div>
+    <div class="col-md-4"><img src="/assets/images/the-guardian-uk-m.png" data-src="the-guardian-uk"/></div>
+    
+</div>
+</div>
+            
+            </div>
+        
+        </div>
+
+        
+        
+  </div>
+      <!-- end row -->
+</div>
+</div>
+</div>

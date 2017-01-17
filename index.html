@@ -1,0 +1,163 @@
+<!doctype>
+<html lang="en" ng-app="newsapp">
+<head>
+	<title>News</title>
+    <base href="/" />
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+	<meta content="utf-8" http-equiv="encoding"/>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css?ver=4.7">
+	<!--<style type="text/css">
+@import url(//fonts.googleapis.com/css?family=Oswald:400,700|Lato:400,700|Work+Sans:900|Montserrat:400,700|Open+Sans:800|Playfair+Display:400,700,900|Quicksand|Raleway:200,400,700|Roboto+Slab:400,700|Work+Sans:100,200,300,400,500,600,700,800,900|Montserrat:100,200,300,400,500,600,700,800,900|Montserrat:100,200,300,400,400italic,500,600,700,700italic,800,900|Lato:100,200,300,400,400italic,500,600,700,700italic,800,900|Montserrat:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
+</style>-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body ng-controller="nwshmcntrl" class="{{this_route()}}-view bgimg">
+	<div class="wcontainer">
+		<header >
+			<div id="main-header" class="w100 left">
+				<div class="nav-logo">
+					<div class="logo logo-left left">
+						<a href="/">
+							<img src="./assets/images/newslogo.png" alt="news" title="newslogo"/>
+						</a>
+					</div>
+					<div class="nav-outr">
+						<div class="navbar-right-ot">
+							<div class="navbar-right">
+								<nav id="navigation">
+									<div class="nav-container">
+										<ul id="main-nav-menu">
+											<li><a href="/home">Home</a></li>
+											<li><a href="/sports">Sports</a></li>
+											<li><a href="/entertainment">Entertainment</a></li>
+											<li><a href="/tech">Tech</a></li>
+											<li><a href="/fashion">Fashion</a></li>
+											<li><a href="/scorecard">Scorecard</a></li>
+                                            <li><a href="/allnews">All News</a></li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+							<div class="nav-right-soc relative">
+								<div class="nav-search-out left relative">
+									<span class="nav-search-inn left"><i class="fa fa-search fa-2"></i></span>
+									<div class="search-fly-wrap">
+									</div><!--search-fly-wrap-->
+								</div><!--nav-search-wrap-->
+								<a href="http://www.facebook.com/" target="_blank">
+									<span class="nav-soc"><i class="fa fa-facebook fa-2"></i></span>
+								</a>
+								<a href="http://www.twitter.com/" target="_blank">
+									<span class="nav-soc"><i class="fa fa-twitter fa-2"></i></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			   </div>	
+			</header>
+	<div id="main-controller">	
+        <div class="row">
+        <div id="mainview" class="col-md-8">
+        <ng-view></ng-view>
+        </div>
+            <div class="col-md-4" ng-controller="sidebarcntrl as wth" ng-show="sidebar.show">
+              <div id="sdestick"> 
+        <div class="wthbox">
+            <!-- Sidbar Weather widget -->
+            <div class="allnwsimg"><h2>Weather</h2></div>
+            <div class="wthboxupp">
+                <div class="weatherforcast">
+<h2>Boston</h2>
+                    <div class="tdyfrcast">
+                    <div class="wthicon">
+                        <div class="fa fa-sun-o wthicon1"></div>
+                        <p class="wiText">Light rain</p>
+                        </div>
+                        <p class="wthtemp">62<sup>°F</sup></p>
+                        <p class="wthtdy">Tuesday</p>
+                    </div>
+                    <ul class="wthForecasts">
+                    <li class="wday"><span>Wednesday</span>
+                        <ul>
+                            <li class="wtafth fa fa-sun-o wtfh"></li>
+                            <li class="whmax wtafth wtfh">51<sup>°F</sup></li>
+                            <li class="whmin wtafth wtfh">53<sup>°F</sup></li>
+                        </ul>
+                    </li>
+                        <li class="wday"><span>Thrusday</span>
+                        <ul>
+                            <li class="wtafth fa fa-sun-o wtfh"></li>
+                            <li class="whmax wtafth wtfh">56<sup>°F</sup></li>
+                            <li class="whmin wtafth wtfh">54<sup>°F</sup></li>
+                        </ul></li>
+                        <li class="wday"><span>Friday</span>
+                        <ul>
+                            <li class="wtafth fa fa-sun-o wtfh"></li>
+                            <li class="whmax wtafth wtfh">55<sup>°F</sup></li>
+                            <li class="whmin wtafth wtfh">52<sup>°F</sup></li>
+                        </ul></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="sdgdtnws">
+                <div class="allnwsimg"><h2>Most Popular</h2></div>
+            <div class="sphmrht right">             
+								<div class="sphmrht" ng-repeat="gdgt in wth.gdtnws.gdt | limitTo :9" >
+									<li>
+										<div class="thumb">
+											<img ng-src="{{gdgt.urlToImage}}" />
+											<div class="overlay"></div>
+										</div>
+										<div class="featuredTitle">											
+											<a ng-href="{{gdgt.url}}" target="_blank">{{gdgt.description}}</a>
+										</div>
+									</li>
+								</div>
+							</div>
+            </div>
+             </div>    
+                
+        </div>	
+            
+            
+        </div>
+        
+	</div>
+			<!-- end of section 2 -->
+
+			<!-- footer -->
+			<footer >
+			<div id="footer" class="ftr">
+					<div class="container">
+						<div class="col-lg-12">
+							<div class="foot-txt"><p style="text-align:center;font-size: 18px;">“Live in the future, then build what's missing.”</p></div>
+
+						</div>
+					</div>
+					<div class="copyright">
+						<div class="container">
+							<div class="row">
+                            <div class="col-lg-10">
+								<div id="copyright">Powered by: <a href="https://newsapi.org/" target="_blank">NewsAP</a></div>
+							</div>
+                            <div class="col-lg-2">
+								<div id="copyright"><a href="#aboutme">About ME</a></div>
+							</div>
+                            </div>
+						</div>	
+			</div>
+		</div>
+			</footer>
+
+					<!-- end of footer -->
+				</div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+				<script type="text/javascript" src="./app/app.js"></script>
+                <script type="text/javascript" src="./app/script.js"></script>
+			</body>
+			</html>

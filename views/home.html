@@ -1,0 +1,122 @@
+<div class="container article-container relative" ng-controller="homecntrl">
+				<!-- top news -->
+				<div class="row">				
+<div class="col-lg-12">
+	<div id="top-news" class="left relative">
+					<div class="row nopadding" id="top-news-inn">
+						<div class="col-lg-3 nopadding tpnews-wide-main left relative" ng-repeat="topn in googlnews.gnwss | limitTo:4">
+
+							<a ng-href="{{topn.url}}" target="_blank">
+								<div class="topnws-img left relative">
+									<img ng-src="{{topn.urlToImage}}" />						
+								</div>
+								<div class="topnws-txt left relative">
+									<span class="feat-cat" ng-bind="topn.author | limitTo:14"></span>
+									<h2 ng-bind="topn.description | limitTo:80"></h2>
+								</div>
+							</a>
+						</div>
+
+					</div>
+				</div>
+</div>
+					
+				</div>
+				<!-- end top news -->
+			</div>
+			<div class="section"></div>
+			<!-- section for sports and technews -->
+				<div class="container sprtssec">
+					<div class="col-lg-12">
+						<div class="col-lg-9 nopadding">
+						<h2 class="sec2title">Sports</h2>							
+							<div class="sphmleft left" ng-repeat="sprts in espn.espnws | limitTo :1" ng-show="$index == 0"><div class="thumb"><a ng-href="{{sprts.url}}" target="_blank"><img ng-src="{{sprts.urlToImage}}"></a><a ng-href="{{sprts.url}}" target="_blank"><div class="overlay"></div></a></div><div class="featuredPost lastPost"><h3 class="postTitle"><a ng-href="{{sprts.url}}" target="_blank">{{sprts.title}}</a></h3><p>{{sprts.description}}</p></div></div>
+
+							<div class="sphmrht right">
+								<div class="sphmrht" ng-repeat="sprts in espn.espnws | limitTo :4" ng-show="$index < 3">
+									<li>
+										<div class="thumb">
+											<img ng-src="{{sprts.urlToImage}}" />
+											<div class="overlay"></div>
+										</div>
+										<div class="featuredTitle">											
+											<a ng-href="{{sprts.url}}" target="_blank">{{sprts.description}}</a>
+										</div>
+									</li>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<h2 class="sec2title">Tech</h2>
+							<ul id="techlist">
+									<li class="techlist-item" ng-repeat="tch in tthreen.tthren | limitTo : 6">
+										<!-- {{getNwstm(tch.publishedAt)}} -->
+<span>{{$index+1}}</span><a ng-href="{{tch.url}}" target="_blank">{{tch.description | limitTo:120}}</a>
+									</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<!-- end of sports and technews -->
+			<!-- section number 2 -->
+			<div class="bg-mine">
+				<div class="article-container relative">
+					<!-- <h2 class="sec2title">Latest News</h2> -->
+					<div class="containers">
+						<div class="row">							
+								<div class="col-lg-12">
+									<div class="row">
+									<div class="row">
+										<div class="col-lg-8">
+											<h2 class="sec2title">National Geographic</h2>
+										</div>
+										<div class="col-lg-4">
+											<h2 class="sec2title">New Scientist</h2>
+										</div>
+									</div>
+										<div class="related-videos row">										
+											<div class="col-xs-12">												
+												<div class="latestsec">
+													<div class="latestsec-img">
+														<div class="row natnws">
+<div class="col-lg-4 natgeobox" ng-repeat="natg in natgeo | limitTo:6">
+<div class="natg-slid">
+	<a ng-href="{{natg.url}}" title="{{natg.title}}" target="_blank">
+		<img ng-src="{{natg.urlToImage}}" title="{{natg.title}}" height="182px" width="265" style="height:182px">
+		<div class="nggallery-text">
+									<p>{{natg.description | limitTo:70}}..</p>
+		</div>
+	</a>
+
+</div>
+ </div>
+														</div>
+													</div>
+													<div class="latestsec-txt">
+														<div class="row nopadding">
+															<div class="scnbox col-sm-12 nopadding" ng-repeat="scn in scientist">
+																<a ng-href="{{scn.url}}" title="{{scn.title}}" target="_blank">
+																	<img ng-src="{{scn.urlToImage}}" alt="" height="80px" width="80px" description="" align="left" style="height:80px;width:80px" />
+<p>{{scn.description | limitTo:240}}..</p>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="featured-box">
+													<div class="col-lg-12">
+														<div class="row">
+
+															<a class="related-video-link col-sm-6 col-md-4">
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+
+				</div>
